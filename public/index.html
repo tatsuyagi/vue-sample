@@ -13,8 +13,9 @@
     <button @click="countDown">カウントダウン</button>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-  <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2431_RC04/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"Vue","geo":"JP","time":"2016-04-22 2021-04-22"},{"keyword":"React","geo":"JP","time":"2016-04-22 2021-04-22"},{"keyword":"Angular","geo":"JP","time":"2016-04-22 2021-04-22"}],"category":0,"property":""}, {"exploreQuery":"date=today%205-y&geo=JP&q=Vue,React,Angular","guestPath":"https://trends.google.co.jp:443/trends/embed/"}); </script>
   <script type="text/javascript" src="/js/sample.js"></script>
+  <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2431_RC04/embed_loader.js"></script>
+  <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"Vue","geo":"JP","time":"today 5-y"},{"keyword":"React","geo":"JP","time":"today 5-y"},{"keyword":"Angular","geo":"JP","time":"today 5-y"}],"category":0,"property":""}, {"exploreQuery":"date=today%205-y&geo=JP&q=Vue,React,Angular","guestPath":"https://trends.google.co.jp:443/trends/embed/"});</script>
   <script type="text/javascript">
     // https://jp.vuejs.org/v2/guide/instance.html
     // ライフサイクルのお勉強
