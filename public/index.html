@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    count: <input id="cnt" type="text" readonly v-model="count"></input><br/>
+    <button @click="countUp">カウントアップ</button>&nbsp;
+    <button @click="countDown">カウントダウン</button>
+  </div>
+  <script type="text/javascript">
+    // https://jp.vuejs.org/v2/guide/instance.html
+    // ライフサイクルのお勉強
+    var count = 100
+    var vm = new Vue({
+      el: '#app',
+      data: () => {
+        return {
+          count: 0,
+          show: true
+        }
+      },
+      // インスタンスは生成されているが、データは初期化されていない
+      beforeCreate() {
+        console.log('beforeCreate called!')
+      },
+      // インスタンスが生成され、データが初期化された
+      created() {
+        console.log('created called!')
+        console.log(this);
+        this.showCount();
+      },
+      // インスタンスが DOM 要素にマウントされる前
+      beforeMount() {
+        console.log('beforeMount called!')
+        this.showCount();
+      },
+      // インスタンスが DOM 要素にマウントされた後
+      mounted() {
+        console.log('mounted called!')
+        this.showCount();
+      },
+      // データは更新されたが DOM に適用される前
+      beforeUpdate() {
+        console.log('beforeUpdate called!')
+        this.showCount();
+      },
+      // データが更新され､且つ DOM に適用された後
+      updated() {
+        console.log('updated called!')
+        this.showCount();
+      },
+      // Vue インスタンスが破壊される前
+      beforeDestroy() {
+        console.log('beforeDestroy called!')
+        this.showCount();
+      },
+      // Vue インスタンスが破壊された後
+      destroyed() {
+        console.log('destroyed called!')
+        this.showCount();
+      },
+      methods: {
+        showCount() {
+          console.log(`this.count: ${this.count}`)
+          console.log(`elm.count: ${document.getElementById('cnt').value}`)
+        },
+        countUp() {
+          console.log('countUp called!')
+          this.count++;
+        },
+        countDown() {
+          console.log('countDown called!')
+          this.count--;
+        }
+      }
+    });
+  </script>
+</body>

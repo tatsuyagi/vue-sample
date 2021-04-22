@@ -1,0 +1,17 @@
+{
+  "name": "vue-sample",
+  "version": "1.0.0",
+  "description": "勉強会用サンプル",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "Vue"
+  ],
+  "author": "T.Yagi",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
