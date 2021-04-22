@@ -3,10 +3,13 @@
 ## Getting started
 
 ```sh
-# After move to checkout directory
+# Clone repository, and move to directory
+git clone https://github.com/tatsuyagi/vue-sample
+cd vue-sample
+# Install dependencies
 npm install
+# Start application (listening on 8080)
 npm start
-# Listening on 8080
 ```
 
 ## Create docker image
