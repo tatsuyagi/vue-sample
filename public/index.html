@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <head>
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>勉強会用 サンプル</title>
+  <link rel="stylesheet" href="/css/sample.css">
 </head>
 <body>
+  <header>勉強会用 サンプル</header>
   <div id="app">
     count: <input id="cnt" type="text" readonly v-model="count"></input><br/>
     <button @click="countUp">カウントアップ</button>&nbsp;
     <button @click="countDown">カウントダウン</button>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2431_RC04/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"Vue","geo":"JP","time":"2016-04-22 2021-04-22"},{"keyword":"React","geo":"JP","time":"2016-04-22 2021-04-22"},{"keyword":"Angular","geo":"JP","time":"2016-04-22 2021-04-22"}],"category":0,"property":""}, {"exploreQuery":"date=today%205-y&geo=JP&q=Vue,React,Angular","guestPath":"https://trends.google.co.jp:443/trends/embed/"}); </script>
+  <script type="text/javascript" src="/js/sample.js"></script>
   <script type="text/javascript">
     // https://jp.vuejs.org/v2/guide/instance.html
     // ライフサイクルのお勉強
@@ -27,7 +34,6 @@
       // インスタンスが生成され、データが初期化された
       created() {
         console.log('created called!')
-        console.log(this);
         this.showCount();
       },
       // インスタンスが DOM 要素にマウントされる前
